@@ -1,0 +1,390 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto',sans-serif;
+    margin: 0; 
+}
+h1{font-size: 3.5em;}
+h2{font-size: 2.7em;}
+h3{font-size: 2em;}
+p{font-size: 1.25em;}
+ul{ list-style: none;}
+
+button{ font-size: 1.5em;
+        font-weight: bold;
+        padding: 10px 20px;
+        
+        border-radius: 10px;
+        border:  1px solid rgba(0,0,0,0.5);
+        box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+        color: white;
+        background-color: blueviolet;
+}
+button:hover{
+    background-color: rgb(68, 23, 110);
+}
+
+.container{
+    max-width: 1400px;
+    margin: auto;
+}
+
+header{
+    background-color: rgb(30, 30, 30);
+}
+header .logo{
+    margin: 0;
+    padding: 25px 30px;
+    font-weight: bold;
+    color: blueviolet;
+    font-size: 1.6em;
+}
+header .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header nav{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+header a{
+    padding: 5px 12px;
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+}
+
+header a:hover{
+    color: blueviolet;
+}
+
+#hero{
+    display: flex;
+    align-items: center ;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 90vh;
+    color: white;
+    background-image:linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("media/hero.jpg.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+#hero h1{
+    color: white;
+    margin-top: 20px; 
+  margin-bottom: 20px; 
+}
+
+
+#somos-proya .container{
+    text-align: center;
+    padding: 200px 12px ;
+}
+.color-programaYa{color: blue;}
+
+#nuestros-programas{
+    background-color: rgb(30, 30, 30);
+    color: white;
+    text-align: center;
+}
+#nuestros-programas .container{
+    padding: 150px 12px;
+
+
+}
+#nuestros-programas h2{
+    margin-top: 0p;
+    font-size: 3.2em;
+}
+
+#nuestros-programas p{
+    display: none;
+}
+
+#nuestros-programas .carta{
+    background-position: center center;
+    background-size: cover;
+    padding: 50px 0px;
+    margin: 12px;
+    border-radius: 15px; 
+    background-repeat: no-repeat;
+   
+}
+.carta:first-child{
+        
+        background-image:linear-gradient(
+            0deg,
+            rgba(0,0,0,0.5),
+            rgba(0,0,0,0.5)
+        )        ,url("media/hero.jpg.webp");
+
+        
+    }
+.carta:nth-child(2){
+    
+    background-image:linear-gradient(
+            0deg,
+            rgba(0,0,0,0.5),
+            rgba(0,0,0,0.5)
+        )        ,url("media/back-end1.jpg");
+
+        
+
+
+}
+.carta:nth-child(3){
+    background-image:linear-gradient(
+            0deg,
+            rgba(0,0,0,0.5),
+            rgba(0,0,0,0.5)
+        )        ,url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTc_FqfTuNJ9U6bIHc66pGYuulv1tYFPTcUwQ&usqp=CAU");
+
+        
+}
+#caracteristicas .container{
+    text-align: center;
+    padding: 200px 12px;
+}
+#caracteristcas li{
+    margin: 12px 0px;
+    font-weight: bold;
+
+}
+
+#aplica-ya{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center ;
+    text-align: center;
+    background-color: rgb(30, 30, 30);
+    color: white;
+    height: 80vh;
+
+}
+
+#aplica-ya h2{
+    font-size: 9vw;
+
+}
+
+#aplica-ya button{
+    font-size: 5vw;
+
+}
+
+footer{
+    background-color: rgb(30, 30, 30);
+
+}
+
+footer p {
+    margin: 0;
+    padding: 12px; ;
+    color: rgb(100, 100, 100);
+}
+footer i{
+    margin: 0;
+    padding: 12px; ;
+    color: rgb(100, 100, 100);
+}
+footer .container{
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+}
+@media (min-width:720px){
+    header .container{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    header {
+        position: fixed;
+        width: 100%;
+    }
+
+    header nav{
+        flex-direction: row;
+        padding-bottom: 0;
+        padding-right: 20px;
+    }
+    #somos-proya .container{
+        display: flex;
+        justify-content: space-evenly;
+        
+    }
+    #somos-proya h2{
+        margin-top: 0px;
+    }
+    #somos-proya .img-container{
+        background-image:  url("media/computacion.jpg");
+        background-size: cover;
+        background-position: center center;
+        height:  500px;
+        width: 400px;
+    }
+    
+    #somos-proya .texto{
+        width: 50%;
+        max-width: 600px;
+        text-align: initial;
+        padding-left: 30px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+    #nuestros-programas .programas{
+        display: flex;
+        justify-content: center;
+
+    }
+    #nuestros-programas p{
+        display: block;
+        margin-bottom: 30px;
+    }
+
+    #nuestros-programas .h3{
+        margin-top: 0;
+    }
+    #nuestros-programas .carta{
+        padding: 15px ;
+        
+    }
+    #caracteristicas{
+        background-image: url("media/compu-caracteristicas.jpg");
+        background-repeat: no-repeat;
+        background-size: 500px 400px;
+        background-position: calc(100vw - 500px) 120px;
+
+    }
+    #caracteristicas .container{
+        text-align: initial;
+    }
+    #caracteristicas .ul {
+        margin-left: 100px;
+    }
+    
+    #aplica-ya h2{
+        font-size: 2em;
+    }
+    #aplica-ya button{
+        font-size: 2em;
+    }
+    #aplica-ya .container{
+        align-content: flex-start;
+    }
+}
+@media (min-width: 1200px){
+    #caracteristicas{
+        background-position-x: calc(100vw - 800px);
+    }
+}
+/* ... Otros estilos ... */
+
+/* Estilos para el formulario */
+form {
+    max-width: 600px;
+    margin: auto;
+  }
+  
+  /* Estilos para etiquetas y campos de entrada */
+  form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+  }
+  
+  form input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  /* Estilos para el botón */
+  form button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  form button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    form {
+      max-width: 100%;
+    }
+  
+    /* Otros estilos responsivos */
+  }
+  #titulo{
+    display: flex;
+    align-items: center ;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 50vh;
+    color: white;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+  #titulo  h1{
+  color: rgb(202, 74, 170);
+  margin-top: 20px; 
+  margin-bottom: 20px; 
+}
+  #tutoriales{
+    background-color: rgb(17, 16, 16);
+  }
+
+/* ... Otro código ... */
+
+.user-menu {
+    position: relative;
+    display: inline-block;
+}
+
+.user-menu i{        
+    margin: 0;
+    padding: 30px; ;
+    color: rgb(100, 100, 100);
+    font-size: 24px;
+}
+#dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: rgb(63, 28, 28);
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.user-menu:hover #dropdown-menu {
+    display: block;
+}
