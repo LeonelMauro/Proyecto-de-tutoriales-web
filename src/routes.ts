@@ -1,9 +1,11 @@
 import {Router} from 'express';
 import {UserCreate} from './controllers/UserControllers';
 import {LoginUser} from './controllers/LoginUser'
+import { GetUser } from './controllers/GetUser';
 
 const router = Router();
 
+const getUser = new GetUser();
 const userCreate= new UserCreate();
 const loginUser = new LoginUser();
 
@@ -27,5 +29,6 @@ router.get("/add", (request, response) => {
     response.render("add");
   });
 
+router.get('/users', getUser.handle);
 
 export {router};
