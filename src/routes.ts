@@ -1,13 +1,21 @@
 import {Router} from 'express';
 import {UserCreate} from './controllers/UserControllers';
-import {LoginUser} from './controllers/LoginUser'
+import {LoginUser} from './controllers/LoginUser';
 import { GetUser } from './controllers/GetUser';
+import { ConfigUser } from "./controllers/CongUser";
 
 const router = Router();
 
+const configUser = new ConfigUser();
 const getUser = new GetUser();
 const userCreate= new UserCreate();
 const loginUser = new LoginUser();
+
+router.get('/config', (req, res) => {
+  res.render("config");
+});
+
+router.post('/autentic', configUser.handle);
 
 router.get('/programas', (req, res) => {
   res.render("programas");
@@ -30,5 +38,6 @@ router.get("/add", (request, response) => {
   });
 
 router.get('/users', getUser.handle);
+
 
 export {router};
