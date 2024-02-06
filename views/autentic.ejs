@@ -12,33 +12,39 @@
         <div class="container">
             <p class="logo">PROGRAMA YA</p>
             <nav>
-                <a href="./programas">Volver</a>   
+                <a href="/">Volver</a>   
             </nav>
         </div>
+        <br>
     </header>
     <br><br><br>
     <h1>Datos del Usuario</h1>
     <table>
         <thead>
             <tr>
+                <th>Id</th>
                 <th>Nombre</th>
                 <th>Email</th>
                 <th>Password</th>
                 <th>Creado</th>
                 <th>Modificado</th>
+                <th>Acciones</th>
             </tr>
         </thead>
         <tbody>
-            
-                <tr>
-                    <td><%= user.name %></td>
-                    <td><%= user.email %></td>
-                    <td><%= user.password %></td>
-                    <td><%= user.create_ap%></td>
-                    <td><%= user.update_ap %></td>
-                    <td><button>Modificar</button></td>
-                </tr>
-        
+            <tr>
+                <td><%= user.id %></td>
+                <td><%= user.name %></td>
+                <td><%= user.email %></td>
+                <td><%= user.password %></td>
+                <td><%= user.create_ap %></td>
+                <td><%= user.update_ap %></td>
+                <td><form action="/edit" method="POST">
+                    <label for="id" class="form-label">Coloque sú Id</label>
+                    <input type="id" name="id" id="id" class="form-control">
+                    <button >Modificadar</button>
+                  </form></td>
+            </tr>
         </tbody>
     </table>
 </body>

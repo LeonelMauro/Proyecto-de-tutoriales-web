@@ -1,0 +1,49 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datos del Usuario</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <p class="logo">PROGRAMA YA</p>
+            <nav>
+                <a href="/programas">Volver</a>   
+            </nav>
+        </div>
+    </header>
+    <br><br><br>
+    <div>
+        <section id="edit">
+            <h1>Actualizacion</h1>
+            <form action="/editar" method="POST">
+                <input type="hidden" name="id" value="<%= user.id %>">
+                <div class="row">
+                  <div class="col-12">
+                    <label for="name" class="form-label">Nombre</label>
+                    <input type="text" name="name" id="name" class="form-control" value="<%= user.name %>">
+                  </div>
+                </div>
+                <br>
+                <div class="row">
+                  <div class="col-6">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="text" name="email" id="email" class="form-control" value="<%= user.email %>">
+                  </div>
+                  <div class="col-6">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="text" name="password" id="password" class="form-control" value="<%= user.password %>">
+                  </div>
+                </div>
+                <br>
+                <div class="float-start">
+                    <button type="submit" class="btn primary-btn">Actualizar usuario</button>     
+                </div>
+        </section>
+    </div>
+    
+</body>
+</html>

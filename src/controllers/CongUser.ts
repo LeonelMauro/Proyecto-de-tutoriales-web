@@ -1,6 +1,5 @@
 import { Request, Response } from "express";
 import { User } from "../database/entities/User";
-import exp from "constants";
 
 class ConfigUser{
     async handle(req: Request , res: Response){
