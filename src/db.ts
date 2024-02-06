@@ -10,6 +10,6 @@ export const AppDataSource = new DataSource({
     database: "comers-12-1-12",
     entities: [User],
     logging:true,
-    synchronize:true
+    
     
 })

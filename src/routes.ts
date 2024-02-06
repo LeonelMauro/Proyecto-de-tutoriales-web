@@ -4,17 +4,19 @@ import {LoginUser} from './controllers/LoginUser';
 import { GetUser } from './controllers/GetUser';
 import { ConfigUser } from "./controllers/CongUser";
 import { UpdateUser } from "./controllers/UpdateUser";
+import { EditConfig } from "./controllers/EditConfig";
 
 const router = Router();
-
+const editConfig = new EditConfig();
 const updateUser =new UpdateUser();
 const configUser = new ConfigUser();
 const getUser = new GetUser();
 const userCreate= new UserCreate();
 const loginUser = new LoginUser();
 
-router.post('/editar/:id', updateUser.handle);
+router.post('/edit',editConfig.handle);
 
+router.post('/editar', updateUser.handle);
 
 router.get('/config', (req, res) => {
   res.render("config");
