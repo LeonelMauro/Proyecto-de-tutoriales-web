@@ -5,8 +5,12 @@ import { GetUser } from './controllers/GetUser';
 import { ConfigUser } from "./controllers/CongUser";
 import { UpdateUser } from "./controllers/UpdateUser";
 import { EditConfig } from "./controllers/EditConfig";
+import {ConfigDeleteUser} from "./controllers/ConfiDeleteUser";
+import { DeleteUser } from "./controllers/DeleteUser";
 
 const router = Router();
+const deleteUser = new DeleteUser();
+const configDeleteUser = new ConfigDeleteUser();
 const editConfig = new EditConfig();
 const updateUser =new UpdateUser();
 const configUser = new ConfigUser();
@@ -22,7 +26,15 @@ router.get('/config', (req, res) => {
   res.render("config");
 });
 
+router.get('/deleteAutentic', (req, res) => {
+  res.render("deleteAutentic");
+});
 router.post('/autentic', configUser.handle);
+
+router.post('/delete', deleteUser.handle);
+
+
+router.post('/deleteuser', configDeleteUser.handle);
 
 router.get('/programas', (req, res) => {
   res.render("programas");
